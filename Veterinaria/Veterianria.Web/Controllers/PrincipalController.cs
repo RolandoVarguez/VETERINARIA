@@ -11,6 +11,7 @@ namespace Veterianria.Web.Controllers
         // GET: Principal
         public ActionResult Index()
         {
+           
             return View();
         }
 
