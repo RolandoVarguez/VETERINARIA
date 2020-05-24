@@ -213,6 +213,16 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\img\bg.jpg" />
+    <Content Include="Content\img\contact.jpg" />
+    <Content Include="Content\img\f2.jpg" />
+    <Content Include="Content\img\f3.jpg" />
+    <Content Include="Content\img\FB.png" />
+    <Content Include="Content\img\logo.jpg" />
+    <Content Include="Content\img\m1.jpg" />
+    <Content Include="Content\img\m2.jpg" />
+    <Content Include="Content\img\pajaro.png" />
+    <Content Include="Content\img\WHATSAPP.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />

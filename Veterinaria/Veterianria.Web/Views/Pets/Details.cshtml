@@ -4,79 +4,99 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<div class="bg-white container">
+    <br />
+    <div class="masthead bg-white">
+        <div class="masthead-content space">
+            <br />
+            <div class="card container border-dark text-lg-center" style="width:30rem">
+                <div>
+                    <br />
+                    <div class="card-header bg-primary text-black-50"></div>
 
-<div>
-    <h4>Pet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+                    <dl class="dl-horizontal text-black-50 container">
+                        <center>  <img src="~/Content/img/logo.jpg" alt="Alternate Text" width="200" height="150" /></center>
+                        <h2 class="text-center"><b>Perfil de la Mascota</b></h2>
+                        <p></p>
+                        <p></p>
+                        <dt>
+                            <b>Nombre de la mascota:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PetType)
-        </dt>
+                        <dt>
+                            <b>Tipo de mascota:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.PetType)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.PetType)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
+                        <dt>
+                            <b>Edad de la mascota:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Age)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </dt>
+                        <dt>
+                            <b>Fecha de Nacimiento:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BirthDate)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.BirthDate)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Color)
-        </dt>
+                        <dt>
+                            <b>Color de pelaje:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Color)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Color)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Race)
-        </dt>
+                        <dt>
+                            <b>Raza de la mascota:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Race)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Race)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Weight)
-        </dt>
+                        <dt>
+                            <b>Peso de la mascota:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Weight)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Weight)
+                        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Height)
-        </dt>
+                        <dt>
+                            <b>Altura de la mascota:</b>
+                        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Height)
-        </dd>
+                        <dd>
+                            @Html.DisplayFor(model => model.Height)
+                        </dd>
 
-    </dl>
+                        <br />
+                        <p>
+                            @Html.ActionLink("Modificar Datos", "Edit", new { id = Model.Id }, new { @class = "btn btn-lg btn-outline-warning btn-block" })
+                            @Html.ActionLink("Volver a la Lista", "Index", null, new { @class = "btn btn-lg btn-danger btn-block" })
+                        </p>
+                    </dl>
+                    <div class="card-footer bg-primary text-black-50" </div>
+
+                </div>
+                <br />
+            </div>
+                
+             </div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+

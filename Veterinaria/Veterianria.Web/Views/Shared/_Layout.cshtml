@@ -3,40 +3,47 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Site.css" rel="stylesheet" />
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Veterinaria</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand text-white" href="@Url.Action("Index","Principal")"><b>PetSecure Veterinary </b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="@Url.Action("Index","Principal")">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Acerca</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
-                </li>
-            </ul>
-            <span class="navbar-text">
-                <a href="@Url.Action("Register","Account")">Registro</a>
-                <a href="@Url.Action("Login","Account")">Iniciar Sesion</a>
-            </span>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav col-md-12 ">
+
+                <a class="nav-item nav-link active text-white" href="@Url.Action("Index","Principal")"><b> Inicio </b><span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link text-white" href="#about"><b>Acerca de </b></a>
+                <a class="nav-item nav-link text-white" href="#contact"><b>Contacto</b></a>
+                <a class="nav-item nav-link active text-white" href="@Url.Action("Index","Pets")"><b> Mascotas </b><span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active text-white" href="@Url.Action("Index","Owners")"><b> Propietarios </b><span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active text-white" href="@Url.Action("Index","Veterinaries")"><b> Veterinarios </b><span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active text-white" href="@Url.Action("Index","Consults")"><b> Consultas </b><span class="sr-only">(current)</span></a>
+                              
+
+                <a class="nav-item nav-link text-white" href="@Url.Action("Login","Account")"><b>Iniciar Sesion</b></a>
+                <a class="nav-item nav-link text-white" href="@Url.Action("Register","Account")"><b>Registrarse</b></a>
+
+
+            </div>
         </div>
     </nav>
+
+
+
+    @RenderBody()
+    <!--FOOTER-->
     <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+        <footer class="text-dark">
+            <h4 class="text-center">&copy; @DateTime.Now.Year - Mi Veterinaria </h4>
         </footer>
     </div>
 

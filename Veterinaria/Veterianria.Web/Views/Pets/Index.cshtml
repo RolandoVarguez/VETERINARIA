@@ -1,75 +1,54 @@
 ﻿@model IEnumerable<Veterianria.Web.Models.Pet>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista de Mascotas";
 }
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PetType)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Age)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.BirthDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Race)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Weight)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Height)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PetType)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Age)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.BirthDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Color)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Race)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Weight)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Height)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    <div class="col-md-offset-2 col-md-12">
+        <p></p>
+        <h1>
+            @Html.ActionLink("Agregar otra Mascota", "Create", null, new { @class = "btn btn-lg btn-block btn-dark" })
+            <p></p>
+        </h1>
 
-</table>
+    </div>
+
+<div class="row col-md-12">
+
+  @foreach (var item in Model)
+  {
+
+     <div class="col-xl-3 col-md-3 mb-4">
+         <div class="card border-bottom-dark shadow  border-left-dark shadow h-100 py-2">
+             <div class="card-header bg-primary"></div>
+             <div class="card-body">
+                 <div class="row no-gutters align-items-center">
+                     <div class="col mr-2">
+                         <div class="text-xs font-weight-bold text-dark text-uppercase text-lg-left mb-1">Nombre: @item.Name</div>
+                         <div class="text-xs font-weight-bold text-dark text-uppercase text-lg-left mb-1">Tipo: @item.PetType</div>
+                         <div class="text-xs font-weight-bold text-dark text-uppercase text-lg-left mb-1">Color: @item.Color</div>
+                     </div>
+                     <div>
+                     <p></p>
+                             @Html.ActionLink("Consultar", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                             @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+                             @Html.ActionLink("Remover", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                       
+                     </div>
+
+                 </div>
+
+             </div>
+             <div class="card-footer bg-primary"></div>
+         </div>
+    </div>
+
+  }
+</div>
+
+
+
+
+
